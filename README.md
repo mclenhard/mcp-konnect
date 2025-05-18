@@ -278,6 +278,15 @@ To use this MCP server with Claude for Desktop:
 4. Register the tool in `tools.ts`
 5. Handle the tool execution in `index.ts`
 
+
+
+## Running evals
+
+The evals package loads an mcp client that then runs the index.ts file, so there is no need to rebuild between tests. You can load environment variables by prefixing the npx command. Full documentation can be found [here](https://www.mcpevals.io/docs).
+
+```bash
+OPENAI_API_KEY=your-key  npx mcp-eval src/evals/evals.ts src/tools.ts
+```
 ## Troubleshooting
 
 ### Common Issues
